@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tabela torneio</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" th:href="@{css/style.css}"/>
+    </head>
+    <body>
+        <h1>Tabela campeonato BRzao</h1>
+        
+        
+        <form action="/time" method="post">
+            <label>Nome do time</label>
+            <input type="text" name="nome" required maxlength="50">
+            <label>Estado:</label>
+            <input type="text" name="estado" required maxlength="2">
+            <button type="submit">Adicionar</button>
+        </form>
+        
+        <br>
+        
+        <form action="/partida" method="post">
+            <label>Digite o id do time 1</label>
+            <input type="number" name="time1_id">
+            <label>Digite a quantidade de gols do time 1</label>
+            <input type="number" name="time1_gols">
+            <div>
+                <label>Digite o id do time 2</label>
+                <input type="number" name="time2_id">
+                <label>Digite a quantidade de gols do time 2</label>
+                <input type="number" name="time2_gols">
+            </div>
+
+            <button type="submit">Confirmar</button>
+        </form>
+    </body>
+</html>
