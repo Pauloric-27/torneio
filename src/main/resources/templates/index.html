@@ -10,7 +10,7 @@
         <h1>Tabela campeonato BRzao</h1>
         
         
-        <form action="/time" method="post">
+        <form action="/salvarTime" method="post">
             <label>Nome do time</label>
             <input type="text" name="nome" required maxlength="50">
             <label>Estado:</label>
@@ -20,7 +20,7 @@
         
         <br>
         
-        <form action="/partida" method="post">
+        <form action="/salvarPartida" method="post">
             <label>Id do time 1</label>
             <input type="number" name="time1_id">
             <label>Gols do time 1</label>
@@ -34,5 +34,20 @@
 
             <button type="submit">Confirmar</button>
         </form>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Estado</th>
+                    <th>Vitórias</th>
+                    <th>Derrotas</th>
+                    <th>Empates</th>
+                    <th>Total de gols</th>
+                    <th>Pontos</th>
+                </tr>
+            </thead>
+        </table>
     </body>
 </html>

@@ -8,6 +8,19 @@
 }
 
 input{
-    margin-top: 7px;
-    margin-bottom: 7px;
+    margin-top: 1%;
+}
+
+button{
+    margin-top: 1%;
+}
+
+table{ 
+    margin-top: 2%;
+    width: 100%; 
+    border-collapse: collapse;
+}
+
+th,td{ 
+    border: 1px solid gray;
 }
