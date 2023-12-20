@@ -35,6 +35,8 @@
             <button type="submit">Confirmar</button>
         </form>
         
+        <h2>Tabela geral</h2>
+        
         <table>
             <thead>
                 <tr>
@@ -48,6 +50,18 @@
                     <th>Pontos</th>
                 </tr>
             </thead>
+            <tbody>
+                <tr th:each="time : ${times}">
+                    <td th:text="${time.getId()}"></td>
+                    <td th:text="${time.getNome()}"></td>
+                    <td th:text="${time.getEstado()}"></td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+            </tbody>
         </table>
     </body>
 </html>

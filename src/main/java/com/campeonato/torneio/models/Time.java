@@ -4,6 +4,8 @@
  */
 package com.campeonato.torneio.models;
 
+import java.util.ArrayList;
+import java.util.List;
 import org.springframework.jdbc.core.JdbcTemplate;
 /**
  *
@@ -15,6 +17,13 @@ public class Time {
     private String nome;
     private String estado;
 
+    public Time(String nome, String estado) {
+        this.nome = nome;
+        this.estado = estado;
+    }
+    
+    
+    
     public int getId() {
         return id;
     }
@@ -41,6 +50,19 @@ public class Time {
         ps.setString(2, estado);});
     }
     
-    
+        public static List<Time> listar (JdbcTemplate jdbc){
+        List<Time> times = new ArrayList<>();
+        jdbc.query("SELECT * FROM times;",
+        (rs) -> {
+            do {
+                Time t = new Time(
+                        rs.getString("nome"),
+                        rs.getString("estado"));
+                t.id = rs.getInt("id");
+                times.add(t);
+            } while(rs.next());
+        });
+        return times;
+    }
     
 }
